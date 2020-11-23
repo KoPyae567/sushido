@@ -34,6 +34,14 @@
 
     @yield('css')
     @livewireStyles
+
+    @livewireScripts
+
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
 </head>
 
 <body>
@@ -105,7 +113,6 @@
 
 
 @yield('js')
-@livewireScripts
 </body>
 
 </html>
