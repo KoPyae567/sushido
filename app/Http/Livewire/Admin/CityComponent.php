@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Http\Controllers\admin\CityController;
 use App\Models\City;
+use Illuminate\Http\Request;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -10,7 +12,7 @@ class CityComponent extends Component
 {
 
     use WithPagination;
-    
+
     public $name;
 
     protected $rules = [
@@ -19,24 +21,35 @@ class CityComponent extends Component
 
     public function insertCity(){
         $this->validate();
-        
-        City::create([
+        $data=[
             'name'=>$this->name
-        ]);
+        ];
+        $request=new Request($data);
+
+        $obj=new CityController();
+        $res=$obj->store($request);
         $this->name="";
-        $this->emit('done');
-        
+        $this->emit('done',$res['status'],$res['message']);
+
     }
 
     public function updateCity(){
         $this->validate();
-        
-        City::findOrFail($this->myid)->update([
+        $data=[
             'name'=>$this->name
-        ]);
+        ];
+        $request=new Request($data);
+        $obj=new CityController();
+        $res=$obj->update($request,$this->myid);
         $this->name="";
-        $this->emit('done');
-        
+        $this->emit('done',$res['status'],$res['message']);
+
+    }
+
+    public function deleteCity($id){
+        $obj=new CityController();
+        $res=$obj->destroy($id);
+        $this->emit('done',$res['status'],$res['message']);
     }
 
 
@@ -48,11 +61,13 @@ class CityComponent extends Component
         $this->myid=$id;
     }
 
-  
+
     public function render()
     {
+        $obj=new CityController();
+        $result=$obj->index();
         return view('livewire.admin.city-component')->with([
-            'data'=>City::paginate(10)
+            'data'=>$result['data']
         ]);
     }
 }

@@ -1,5 +1,13 @@
 <div>
     <div class="card">
+
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+
+
         <div class="card-header">
             <h5>City Manage</h5>
             <div style="float: right">
@@ -24,13 +32,13 @@
                             <td>{{$item->name}}</td>
                             <td>
                                 <button class="btn btn-success btn-round" data-toggle="modal" data-target="#edit_modalBox" wire:click="setData({{$item->id}})">Edit</button>
-                                <button class="btn btn-danger btn-round">Delete</button>
+                                <button class="btn btn-danger btn-round" wire:click="deleteCity({{$item->id}})">Delete</button>
                             </td>
                         </tr>
                         @endforeach
-                      
+
                     </tbody>
-                   
+
                 </table>
                 {{ $data->links() }}
             </div>
@@ -56,7 +64,7 @@
               </button>
             </div>
             <form wire:submit.prevent="updateCity()" >
-              <div class="modal-body">                
+              <div class="modal-body">
                   <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" wire:model.lazy="name" class="form-control" id="name">
@@ -90,7 +98,7 @@
               </button>
             </div>
             <form wire:submit.prevent="insertCity()" >
-              <div class="modal-body">                
+              <div class="modal-body">
                   <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" wire:model.lazy="name" class="form-control" id="name">
@@ -113,13 +121,15 @@
 
 
 
-    
+
 
       <script>
-        Livewire.on('done', () => {
-            $('#create_modalBox').modal('hide');
-            $('#edit_modalBox').modal('hide');
-        })
+         Livewire.on('done',  (type,msg) =>{
+               $('#edit_modalBox').modal('hide');
+               $('#create_modalBox').modal('hide');
+              type=="success"?toastr.success(msg, 'Success!'):toastr.error(msg, 'Fail!')
+
+          });
         </script>
 
 

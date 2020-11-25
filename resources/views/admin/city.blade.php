@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @section('css')
-    
+
 @endsection
 
 
@@ -43,7 +43,7 @@
         <div class="page-body">
             <!-- DOM/Jquery table start -->
             @livewire('admin.city-component')
-          
+
         </div>
         <!-- Page-body start -->
     </div>
@@ -68,5 +68,5 @@
 @endsection
 
 @section('js')
-    
+
 @endsection

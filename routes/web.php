@@ -34,4 +34,5 @@ Route::get('/admin/city',function(){
 
 
 
+
 Route::get('testing',[CityController::class,'index']);

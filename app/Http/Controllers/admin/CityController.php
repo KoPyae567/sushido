@@ -11,7 +11,7 @@ class CityController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return array
      */
     public function index()
     {
@@ -30,14 +30,14 @@ class CityController extends Controller
      */
     public function create()
     {
-    
+
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return array
      */
     public function store(Request $request)
     {
@@ -88,7 +88,7 @@ class CityController extends Controller
         $data=City::findOrFail($id)->update($request->all());
         return [
             'status'=>"success",
-            'message'=>"Successfully Created",
+            'message'=>"Successfully Updated",
             'data'=>''
         ];
     }

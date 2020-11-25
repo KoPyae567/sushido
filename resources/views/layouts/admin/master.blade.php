@@ -31,7 +31,7 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{{url('files\assets\css\style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('files\assets\css\jquery.mCustomScrollbar.css')}}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     @yield('css')
     @livewireStyles
 
@@ -54,7 +54,7 @@
     <div class="pcoded-container navbar-wrapper">
         @include('layouts.admin.header')
 
-        
+
         <!-- Sidebar inner chat end-->
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
@@ -111,7 +111,7 @@
   gtag('config', 'UA-23581568-13');
 </script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 @yield('js')
 </body>
 
