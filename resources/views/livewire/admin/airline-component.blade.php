@@ -1,5 +1,6 @@
 <div>
     <div class="card">
+
         <div class="card-header">
             <h5>City Manage</h5>
             <div style="float: right">
@@ -12,7 +13,8 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th width="70%">Name</th>
+                            <th width="35%">Logo</th>
+                            <th width="35%">Name</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -22,9 +24,10 @@
                         <tr>
                             <td>{{json_decode(json_encode($data),true)['from']+$no++}}</td>
                             <td>{{$item->name}}</td>
+                            <td>{{$item->name}}</td>
                             <td>
                                 <button class="btn btn-success btn-round" data-toggle="modal" data-target="#edit_modalBox" wire:click="setData({{$item->id}})">Edit</button>
-                                <button class="btn btn-danger btn-round" wire:click="deleteCity({{$item->id}})">Delete</button>
+                                <button class="btn btn-danger btn-round" wire:click="deleteData({{$item->id}})">Delete</button>
                             </td>
                         </tr>
                         @endforeach
@@ -62,6 +65,14 @@
                     <input type="text" wire:model.lazy="name" class="form-control" id="name">
                     @error('name') <span class="error">{{ $message }}</span> @enderror
                   </div>
+
+                   <div class="form-group">
+                    <label for="name">Photo</label>
+                    <input type="file" wire:model.lazy="photo" class="form-control" id="name">
+                    @error('name') <span class="error">{{ $message }}</span> @enderror
+                  </div>
+
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -89,13 +100,22 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <form wire:submit.prevent="insertCity()" >
+            <form wire:submit.prevent="insertData()" >
               <div class="modal-body">
                   <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" wire:model.lazy="name" class="form-control" id="name">
                     @error('name') <span class="error">{{ $message }}</span> @enderror
                   </div>
+                     <div class="form-group">
+                    <label for="name">Photo</label>
+                    <input type="file" wire:model.lazy="photo" class="form-control" id="photo">
+                    @error('photo') <span class="error">{{ $message }}</span> @enderror
+                  </div>
+                   @if ($photo)
+                        Photo Preview:
+                        <img src="{{ $photo->temporaryUrl() }}" style="width: 200px;height: 200px">
+                    @endif
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

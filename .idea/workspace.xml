@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="31b7d1dd-352c-411e-b90c-54702bb8a264" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/airline.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/CityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Admin/CityComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Admin/CityComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/city.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/demo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/demo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/admin/city-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/admin/city-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,22 +184,37 @@
       <updated>1606307340190</updated>
       <workItem from="1606307341228" duration="2731000" />
       <workItem from="1606310129256" duration="2272000" />
-      <workItem from="1606313394227" duration="1196000" />
+      <workItem from="1606313394227" duration="6086000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="762" y="468" width="458" height="185" key="NewPhpFileDialog" timestamp="1606321254659">
+      <screen x="72" y="34" width="1848" height="1046" />
+    </state>
+    <state x="762" y="468" width="458" height="185" key="NewPhpFileDialog/72.34.1848.1046@72.34.1848.1046" timestamp="1606321254659" />
     <state x="257" y="168" width="1271" height="912" key="SettingsEditor" timestamp="1606313383037">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
     <state x="257" y="168" width="1271" height="912" key="SettingsEditor/72.34.1848.1046@72.34.1848.1046" timestamp="1606313383037" />
-    <state width="623" height="498" key="SwitcherDM" timestamp="1606309753458">
+    <state width="623" height="498" key="SwitcherDM" timestamp="1606321200314">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>
-    <state width="623" height="498" key="SwitcherDM/72.34.1848.1046@72.34.1848.1046" timestamp="1606309753458" />
+    <state width="623" height="498" key="SwitcherDM/72.34.1848.1046@72.34.1848.1046" timestamp="1606321200314" />
     <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606309553841">
       <screen x="72" y="34" width="1848" height="1046" />
     </state>

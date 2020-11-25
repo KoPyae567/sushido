@@ -33,6 +33,18 @@ Route::get('/admin/city',function(){
 });
 
 
+Route::get('/admin/airline',function(){
+    return view('admin.airline');
+});
+Route::get('/admin/create-ticket',function(){
+    $cities=\App\Models\City::orderBy('name')->get();
+    $airlines=\App\Models\Airline::orderBy('name')->get();
+    return view('admin.ticket.create-ticket')->with([
+        'cities'=>$cities,
+        'airlines'=>$airlines
+    ]);
+});
+
 
 
 Route::get('testing',[CityController::class,'index']);

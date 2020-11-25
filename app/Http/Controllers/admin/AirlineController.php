@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Models\City;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Airline;
+use Illuminate\Http\Request;
 
-class CityController extends Controller
+class AirlineController extends Controller
 {
-    /**
+       /**
      * Display a listing of the resource.
      *
      * @return array
      */
     public function index()
     {
-        $data=City::paginate(10);
+        $data=Airline::paginate(10);
         return [
             'status'=>"success",
             'message'=>"Successful",
@@ -29,15 +29,15 @@ class CityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function store(Request $request)
-    {
-        $data=City::create($request->all());
-        return [
-            'status'=>"success",
-            'message'=>"Successfully Created",
-            'data'=>$data
-        ];
-    }
+//    public function store(Request $request)
+//    {
+//        $data=Airline::create($request->all());
+//        return [
+//            'status'=>"success",
+//            'message'=>"Successfully Created",
+//            'data'=>$data
+//        ];
+//    }
 
     /**
      * Display the specified resource.
@@ -47,7 +47,7 @@ class CityController extends Controller
      */
     public function show($id)
     {
-        $data=City::findOrFail($id);
+        $data=Airline::findOrFail($id);
         return [
             'status'=>"success",
             'message'=>"Successful",
@@ -63,15 +63,15 @@ class CityController extends Controller
      * @param  int  $id
      * @return string[]
      */
-    public function update(Request $request, $id)
-    {
-        $data=City::findOrFail($id)->update($request->all());
-        return [
-            'status'=>"success",
-            'message'=>"Successfully Updated",
-            'data'=>''
-        ];
-    }
+//    public function update(Request $request, $id)
+//    {
+//        $data=Airline::findOrFail($id)->update($request->all());
+//        return [
+//            'status'=>"success",
+//            'message'=>"Successfully Updated",
+//            'data'=>''
+//        ];
+//    }
 
     /**
      * Remove the specified resource from storage.
@@ -81,7 +81,7 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        $data=City::findOrFail($id)->delete();
+        $data=Airline::findOrFail($id)->delete();
         return [
             'status'=>"success",
             'message'=>"Successfully Created",
